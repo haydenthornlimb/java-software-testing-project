@@ -1,185 +1,307 @@
-# Java Software Testing Project
+# Java Software Engineering Projects
 
-A Java software engineering project focused on automated unit testing, input validation, object-oriented design, and verification of application model behavior.
+A collection of Java software engineering work completed as part of my coursework at Arizona State University, demonstrating application development, object-oriented programming, GUI development, data management, automated testing, input validation, and technical documentation.
 
-This project was completed as part of my Software Engineering coursework at Arizona State University. My work included developing and testing application functionality using Java and JUnit, with an emphasis on verifying expected behavior, handling invalid inputs, and testing edge cases.
+This repository serves as a portfolio overview of the technical concepts and development practices I applied throughout the course.
 
-> **Note:** Source code is not publicly included in this repository in order to preserve academic integrity for current and future students.
-
----
-
-## Project Demo
-
-A screencast demonstrating the project, development environment, and testing workflow is available below.
-
-[▶ View Project Screencast on Google Drive](https://drive.google.com/drive/folders/11-_sRzTjvkuytVrA_WBf5stmNa8yhWwC?usp=drive_link)
+> **Note:** Source code and original assignment materials are intentionally not publicly included in order to preserve academic integrity. Project demonstrations and descriptions are provided instead.
 
 ---
 
-## Overview
+## Project Overview
 
-The project involved developing and testing components of a Java application using object-oriented programming principles.
+Throughout the course, I worked on components of a Java application that incorporated user interfaces, application models, data management, validation, testing, and documentation.
 
-A major focus of my work was creating automated unit tests to verify the behavior of application model classes. Tests were designed to cover both expected functionality and invalid or edge-case inputs.
+My work provided experience with several stages of the software development process, including:
 
-The testing process included verifying object creation, data modification, input validation, relationships between application objects, and consistency of stored data.
+- Designing and working with Java application components
+- Developing and interacting with graphical user interfaces
+- Working with application data and model objects
+- Implementing and testing question-and-answer functionality
+- Validating user input and application state
+- Designing automated unit tests
+- Testing positive, negative, and edge-case scenarios
+- Working with relationships between application objects
+- Generating and reviewing Javadoc documentation
+- Using Eclipse as a Java development environment
 
 ---
 
-## Testing Approach
+# Application Development
 
-I developed JUnit tests covering positive, negative, and edge-case scenarios.
+One portion of my coursework involved working with a Java application containing graphical interfaces and functionality for managing application data.
+
+The application included question-and-answer functionality and interfaces for interacting with stored information.
+
+This work provided hands-on experience working with multiple components of a larger Java application rather than isolated programming exercises.
+
+## Concepts Demonstrated
+
+- Java application development
+- Object-oriented programming
+- Graphical user interfaces
+- Application models
+- Data management
+- User input handling
+- Question-and-answer functionality
+- Application navigation
+- Integration between application components
+
+---
+
+## Application Demonstration
+
+The following screencast demonstrates the Java application and its functionality.
+
+### Java Application – GUI, Data Management & Question/Answer Functionality
+
+The demonstration showcases the running application and interaction with its graphical interface and question-and-answer functionality.
+
+[▶ View Application Demonstration on Google Drive](https://drive.google.com/drive/folders/11-_sRzTjvkuytVrA_WBf5stmNa8yhWwC?usp=drive_link)
+
+---
+
+# Automated Software Testing
+
+Another major component of my coursework involved developing automated tests for Java application models.
+
+I created JUnit tests designed to verify both normal application behavior and the application's response to invalid or unusual inputs.
+
+Testing covered object creation, updates, validation, object relationships, data normalization, identifiers, and edge cases.
+
+---
+
+## Unit Testing
+
+The test suite included positive, negative, and edge-case testing.
 
 ### Object Creation
 
-Tests verified that objects were initialized correctly with expected values, including:
+Tests verified that application objects were initialized correctly with expected information such as:
 
 - Titles
 - Descriptions
 - Tags
 - Author information
-- Automatically generated identifiers
+- Generated identifiers
 
-Tests also verified that required fields were validated during object creation.
+Tests also verified that required information was validated during object creation.
 
 ### Input Validation
 
-Negative test cases were used to verify that invalid data was rejected appropriately.
+Negative tests verified that invalid data was rejected appropriately.
 
-Examples included:
+Examples included testing:
 
-- Empty titles
-- Empty descriptions
+- Empty required titles
+- Empty required descriptions
 - Invalid updates to required fields
+- Expected exception behavior
 
-Expected exceptions were verified using automated assertions.
+These tests helped verify that invalid application states could not be introduced through normal object operations.
 
 ### Object Updates
 
-Tests verified that application objects could be modified correctly after creation.
+Tests verified that existing application objects could be modified successfully.
 
-This included updating:
+Test cases covered updates to:
 
 - Titles
 - Descriptions
 - Collections of tags
 
-Assertions were used to confirm that the object's state matched the expected values after each operation.
+Assertions were used to verify that the resulting object state matched the expected values.
 
-### Tag Handling
+### Tag Processing
 
-Testing was performed on tag-related functionality, including:
+Testing also covered application behavior involving tags, including:
 
 - Adding individual tags
-- Updating collections of tags
+- Updating tag collections
 - Handling empty tag collections
-- Normalizing tag capitalization
+- Normalizing capitalization
 
-For example, tags supplied with different capitalization were verified to be stored consistently in lowercase form.
+For example, mixed-case tag input was tested to verify that tags were stored consistently in lowercase.
 
-### Object Relationships
+### Question and Answer Relationships
 
-Tests verified interactions between related application objects.
+Tests verified interactions between question and answer objects.
 
 This included adding an answer to a question and confirming that:
 
-- The answer was associated with the correct question
-- The answer appeared in the question's collection of answers
-- Stored answer data matched the expected values
+- The answer was successfully associated with the question
+- The question's answer collection was updated
+- Stored answer information matched the expected data
 
 ### Unique Identifiers
 
 Tests verified that independently created question objects received unique identifiers.
 
-This helped confirm that application objects could be distinguished reliably from one another.
+This helped ensure that separate application objects could be reliably distinguished from one another.
 
-### Resolution State
+### Question Resolution
 
-Testing also verified functionality related to resolving questions, including confirming that information about the user responsible for resolving a question was stored correctly.
+Testing also covered question-resolution functionality, including verification that information identifying the user responsible for resolving a question was stored correctly.
 
 ### Edge Cases
 
-Additional tests were created for edge cases such as creating a question without any tags.
+Additional tests covered valid but less common application states, such as creating a question without any tags.
 
-These tests helped verify that optional data could be handled without interfering with normal application behavior.
+Testing these cases helped ensure that optional information could be handled without interfering with expected application behavior.
 
 ---
 
-## Testing Strategy
+# Testing Strategy
 
-The test suite was designed around three general categories:
+I structured testing around three primary categories.
 
-### Positive Testing
+## Positive Testing
 
-Verified that valid inputs produced the expected results.
+Verified that valid inputs and operations produced the expected results.
 
 Examples included:
 
 - Creating valid objects
-- Updating object properties
+- Updating properties
 - Adding answers
 - Adding tags
 - Resolving questions
 
-### Negative Testing
+## Negative Testing
 
 Verified that invalid inputs were rejected appropriately.
 
 Examples included:
 
+- Missing required information
 - Empty required fields
 - Invalid property updates
 
-### Edge-Case Testing
+Expected exceptions were checked using automated assertions.
 
-Verified behavior under less common but valid conditions.
+## Edge-Case Testing
+
+Verified application behavior under less common conditions.
 
 Examples included:
 
 - Empty tag collections
 - Mixed-case tag input
-- Creation of multiple objects requiring unique identifiers
+- Multiple objects requiring unique identifiers
 
 ---
 
-## Technologies & Concepts
+## Testing & Documentation Demonstration
+
+The following screencast demonstrates the testing and documentation workflow used during the project.
+
+### Java Application – Unit Testing & Javadoc Documentation
+
+The demonstration showcases automated testing and project documentation within the Java development environment.
+
+[▶ View Testing & Documentation Demonstration on Google Drive](https://drive.google.com/drive/folders/11-_sRzTjvkuytVrA_WBf5stmNa8yhWwC?usp=drive_link)
+
+---
+
+# Development & Testing Workflow
+
+The coursework provided experience working through several parts of a typical software development workflow:
+
+```text
+Application Requirements
+        |
+        v
+Java Application Components
+        |
+        v
+Application Models & Data
+        |
+        v
+GUI / User Interaction
+        |
+        v
+Input Validation
+        |
+        v
+JUnit Test Development
+        |
+        v
+Positive / Negative / Edge-Case Testing
+        |
+        v
+Documentation & Verification
+```
+
+This helped connect implementation with testing rather than treating software testing as a separate activity.
+
+---
+
+# Technologies & Concepts
 
 - Java
 - JUnit
+- Eclipse IDE
+- Javadoc
 - Object-Oriented Programming
+- Graphical User Interfaces
 - Unit Testing
 - Automated Testing
 - Test Case Design
 - Input Validation
 - Exception Handling
 - Java Collections
-- Javadoc
-- Eclipse IDE
+- Application Models
+- Software Documentation
 - Software Engineering
 
 ---
 
-## What I Learned
+# What I Learned
 
-This project provided hands-on experience designing automated tests for a larger Java application and strengthened my understanding of:
+This coursework strengthened my understanding of how different parts of software development fit together within a larger Java application.
 
-- Writing structured JUnit test suites
-- Designing positive and negative test cases
+In particular, I gained hands-on experience with:
+
+- Developing and working with multi-component Java applications
+- Applying object-oriented programming principles
+- Working with graphical application interfaces
+- Managing interactions between application objects
+- Designing structured JUnit test suites
+- Writing positive and negative test cases
 - Identifying useful edge cases
 - Using assertions to verify application behavior
-- Testing exception handling and input validation
-- Testing interactions between related objects
+- Testing input validation and exception handling
+- Testing relationships between related objects
 - Working with Java collections
-- Applying object-oriented programming principles
-- Documenting Java software with Javadoc
-- Using automated testing as part of the software development process
+- Generating and reviewing Javadoc documentation
+- Using automated testing as part of the development process
 
-The project also reinforced the importance of testing software behavior beyond the expected use case by considering invalid inputs, boundary conditions, and unexpected application states.
+One of the most valuable aspects of the coursework was learning to consider software from both the development and testing perspectives. Functionality needed not only to work under expected conditions, but also to behave predictably when given invalid or unexpected input.
 
 ---
 
-## Academic Project Notice
+# Project Media
+
+Because source code cannot be publicly distributed, project screencasts are provided to demonstrate the functionality and development work described in this repository.
+
+### Application Demonstration
+
+**Java Application – GUI, Data Management & Question/Answer Functionality**
+
+[▶ View on Google Drive](https://drive.google.com/drive/folders/11-_sRzTjvkuytVrA_WBf5stmNa8yhWwC?usp=drive_link)
+
+### Testing & Documentation Demonstration
+
+**Java Application – Unit Testing & Javadoc Documentation**
+
+[▶ View on Google Drive](https://drive.google.com/drive/folders/11-_sRzTjvkuytVrA_WBf5stmNa8yhWwC?usp=drive_link)
+
+---
+
+# Academic Project Notice
 
 This repository documents work completed as part of Arizona State University coursework.
 
-Source code and assignment materials are intentionally not publicly included in order to preserve course academic integrity. The repository is intended to document the project's technical concepts, testing methodology, and skills demonstrated rather than provide solutions to the original coursework.
+Source code and original assignment materials are intentionally not publicly included in order to preserve academic integrity for current and future students.
+
+The repository is intended to document the software engineering concepts, development practices, testing methodology, and technical skills demonstrated through my work rather than provide solutions to the original coursework.
